@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+section{
+    margin-top: 40px;
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    background-color: #2e395d;
+}
+
+.social-icons-container{
+    width: 100%;
+    background-color: #898787;
+}
+
+.social-icons{
+    padding: 10px 0 10px;
+}
+
+.social-icons img{
+    width: 24px;
+    margin-right: 10px;
+}
+
+.logo{
+    display: flex;
+    padding: 10px 0;
+    width: 40%;
+    align-items: center;
+}
+
+.logo img{
+    width: 100px;
+    margin-right: 10px;
+}
+
+.logo p{
+    
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #fff;
+}
+
+.graduate-main{
+    display: flex;
+    justify-content: left;
+}
+
+.foto{
+/*     padding-top: 100%; */
+    width: 400px;
+    height: 400px;
+    margin-right: 25px;
+    box-shadow: 0 0 5px gray;
+    position: relative;
+}
+
+.foto img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info h1{
+    font-weight: 900;
+    font-size: 40px;
+    
+}
+
+.graduate-info h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.row{
+    margin-top: 10px;
+}
+
+.row p{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.skills-passport{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-passport h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.skills-passport img{
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 0 5px gray;
+}
+
+
+.diplom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.diplom h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.diplom img{
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 0 5px gray;
+}
+
+.video{
+    display: flex;
+    flex-direction: column;
+}
+
+.video h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.video iframe{
+    margin-top: 25px;
+    width: 600px;
+    height: 480px;
+}
+
+
+footer{
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 25px;
+    background-color: #2e395d;
+    color: #fff;
+}
+
+footer .row-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .row-2{
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+
+/* МОДАЛьНОЕ */
+#myImg {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+/*     background-color: rgb(0,0,0);  */
+    background-color: rgba(0,0,0,0.9); 
+}
+
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+}
+
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* index.html */
+
+.demo h1{
+    text-align: center;
+    font-size: 50px;
+}
+.demo-info{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.demo-info h2{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.demo-info p{
+    font-size: 20px;
+}
+
+/* Медиа запросы */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    .wrapper{
+        padding: 0 10px 0 10px;
+    }
+
+    .graduate-main{
+        display: flex;
+        flex-direction: column;
+/*         align-items: center ; */
+    }
+    
+    .foto{
+        width: 100%;
+    }
+
+    .info h1{
+        font-weight: 900;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    footer .row-1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .video iframe{
+        margin-top: 25px;
+        width: 300px;
+        height: 150px;
+    }
+
+    .logo p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 350px){
+
+    footer .logo{
+        display: none;
+    }
+
+    .video iframe{
+        margin-top: 25px;
+        width: 200px;
+        height: 150px;
+    }
+}

@@ -1,0 +1,78 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+{% block title %} - {{graduate_info.fio}} {%endblock%}
+{% block content %}
+<section>
+  <div class="wrapper">
+      <div class="graduate-main">
+          <div class="foto">
+            {% if graduate_info.foto %}
+              <img src="{{graduate_info.foto.url}}" alt="{{graduate_info.fio}}">
+            {% endif %}
+          </div>
+          <div class="info">
+              <h1>{{graduate_info.fio}}</h1>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="graduate-info">
+  <div class="wrapper">
+      <h1>Образование</h1>
+      <div class="row">
+          <h2>Специальность: </h2>
+          <p>{{graduate_info.spec}}</p>
+      </div>
+      <div class="row">
+          <h2>Квалификация: </h2>
+          <p>{{graduate_info.qual}}</p>
+      </div>
+      <div class="row">
+          <h2>Дата поступления: </h2>
+          <p>{{graduate_info.year_of_admission}}</p>
+      </div>
+      <div class="row">
+          <h2>Дата выпуска: </h2>
+          <p>{{graduate_info.year_of_issue}}</p>
+      </div>
+  </div>
+</section>
+{% if graduate_info.diplom %}
+<section class="diplom">
+  <div class="wrapper">
+      <h1>Диплом</h1>
+      <img src="{{graduate_info.diplom.url}}" alt="" onClick="get_id(`${this.id}`)" id="dp">
+<!--       <h1>Приложение</h1> -->
+      <img src="{{graduate_info.pril_kaz.url}}" alt="" onClick="get_id(`${this.id}`)" id="pril_kaz">
+      <img src="{{graduate_info.pril_ru.url}}" alt="" onClick="get_id(`${this.id}`)" id="pril_ru">
+    </div>
+</section>
+{% endif %}
+{% if graduate_info.skill_pass %}
+<section class="skills-passport">
+  <div class="wrapper">
+      <h1>Skills-паспорт</h1>
+      <img src="{{graduate_info.skill_pass.url}}" alt="" onClick="get_id(`${this.id}`)" id='sp'>
+  </div>
+</section>
+
+<section class="video">
+  <div class="wrapper">
+      <h1>Видео</h1>
+      <iframe src="{{graduate_info.ytb_url}}" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+  </div>
+</section>
+{% endif %}
+{% comment %} Модальное  {% endcomment %}
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script src={% static 'main/js/script.js' %}></script>
+{% endblock %}
