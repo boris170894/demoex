@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.base import View
+from django.views.generic.list import ListView
 
 from .models import GraduateInfoModel, CollegeInfoMoodel
 
@@ -30,6 +31,9 @@ def show_info(request, slug):
 def index(request):
     return render(request, 'main/index.html')
 
+""" def grad_list(request):
+    context = GraduateInfoModel.objects.all()
+    return render(request, 'main/graduate_list.html', {"context":context}) """
 
 """     
 class collegeInfoView(View):

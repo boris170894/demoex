@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+<section>
+    <div class='wrapper'>
+        {% for item in context %}
+            <div class="item-container">
+                <div class="list-foto">
+                    {% if item.foto %}
+                    <img src="{{item.foto.url}}">
+                    {% endif %}
+                <div>
+                <div class="list-info">
+                    <h2>{{item.fio}}<h2>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}
