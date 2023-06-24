@@ -11,10 +11,13 @@
             </div>
         </div>
     </div>
-    <div class="wrapper">
+    <div class="wrapper top">
         <div class="logo">
-            <a href="{% url 'index' %}"><img src="{% static 'main/img/logo/logo.png' %}" alt=""></a>
+            <a href="{% url "index" %}"><img src="{% static 'main/img/logo/logo.png' %}" alt=""></a>
             <p>Колледж информационных технологий</p>
+        </div>
+        <div>
+            <a href={% url 'admin:index' %}>Войти</a>
         </div>
     </div>
 </header>
